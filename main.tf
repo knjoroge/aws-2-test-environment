@@ -13,7 +13,7 @@ data "terraform_remote_state" "application" {
 }
 
 resource "aws_instance" "test" {
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-0e36db3a3a535e401"
   instance_type = "t2.micro"
   subnet_id     = data.terraform_remote_state.application.outputs.subnet_id
 }
