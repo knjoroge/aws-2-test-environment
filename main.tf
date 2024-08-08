@@ -17,3 +17,7 @@ resource "aws_instance" "test" {
   instance_type = "t2.micro"
   subnet_id     = data.terraform_remote_state.application.outputs.subnet_id
 }
+
+output "test_instance_id" {
+  value = aws_instance.test.id
+}
